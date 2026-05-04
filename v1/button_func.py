@@ -4,14 +4,16 @@ import tkinter as tk
 from PIL import Image, ImageTk
 
 
-def get_image():
+def get_image_path():
     file_types = [('Image Files', '*.png *.jpg *.jpeg *.gif')]
-    img = tk.filedialog.askopenfilename(filetypes=file_types)
-    display_img = ImageTk.PhotoImage(img)
-    return display_img
+    img_path = tk.filedialog.askopenfilename(filetypes=file_types)
+    if len(img_path) > 0:
+        return img_path
+    else:
+        return None
 
 
-def get_palette_length(frm, length):
+def get_palette_length(main_frm, length):
     length = length.get()
     length = int(length)
     if length > 0:

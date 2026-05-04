@@ -7,6 +7,11 @@ class ColorPicker:
         self.cols = self.get_all_colors(img_path)
         self.palette = []
 
+
+    def get_img_path(self):
+        pass
+
+
     def get_all_colors(self, img_path):
         img = Image.open(img_path).convert('RGB')
         colors = img.getcolors(img.size[0] * img.size[1])
