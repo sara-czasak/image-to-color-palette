@@ -18,7 +18,7 @@ img_mgr = ImageManager()
 
 # CHOSE IMAGE AND PALETTE LEN
 # Let user choose img
-choose_img_button = ttk.Button(main_frm, text="CHOOSE IMAGE", command=lambda: img_mgr.get_image(choose_img_button, image_frm))
+choose_img_button = ttk.Button(main_frm, text="CHOOSE IMAGE", command=lambda: img_mgr.get_or_change_img(choose_img_button, image_frm))
 choose_img_button.grid(column=0, row=0, padx=10, pady=10)
 
 
